@@ -10,11 +10,3 @@ pub use responses::*;
 pub use api::*;
 
 use serde_json::json;
-
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn api_test() {
-        assert_eq!(2 + 2, 4);
-  }
-}
