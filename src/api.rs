@@ -19,7 +19,14 @@ impl Pegnetd {
       client: reqwest::Client::new(),
       node: OPEN_NODE
     }
-  }  
+  }
+
+  pub fn custom_node(node: &'static str) -> Self {
+    Self {
+      client: reqwest::Client::new(),
+      node
+    }
+  }
 }
 
 /// Return the current heights synced by pegnetd and the factomd it is communicating with.
