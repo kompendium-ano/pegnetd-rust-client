@@ -137,7 +137,7 @@ pub async fn transactions(
   request(api, req).await
 }
 
-#[derive(Default, Debug, Serialize)] 
+#[derive(Default, Clone, Debug, Serialize)] 
 pub struct TxParams {
   pub entryhash: Option<String>,
   pub address: Option<String>,

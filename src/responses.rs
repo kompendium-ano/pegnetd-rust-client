@@ -1,7 +1,7 @@
 use serde::Deserialize;
  
 /// JSON responses are deserialized into this struct
-#[derive(Default, Deserialize, Debug, PartialEq)]
+#[derive(Default, Clone, Deserialize, Debug, PartialEq)]
 pub struct ApiResponse<T>
   where T:  Default
 {
@@ -14,7 +14,7 @@ pub struct ApiResponse<T>
 }
 
 // Generic Factom API Error struct
-#[derive(Deserialize, PartialEq, Default, Debug)]
+#[derive(Deserialize, Clone, PartialEq, Default, Debug)]
 pub struct Error {
   pub code: i16,
   pub message: String

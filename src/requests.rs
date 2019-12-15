@@ -24,7 +24,7 @@ pub async fn request<T, R>(api: &Pegnetd, req: R) -> ApiResponse<T>
 }
 
 /// JSON-RPC serialisation struct
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct ApiRequest {
   pub jsonrpc: &'static str,
   pub id: usize,
@@ -45,7 +45,7 @@ impl ApiRequest{
 }
 
 /// For use with the Transctions API only
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct TxsApiRequest {
   pub jsonrpc: &'static str,
   pub id: usize,
