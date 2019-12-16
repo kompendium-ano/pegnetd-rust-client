@@ -7,7 +7,7 @@
 ## Usage
 In cargo.toml:
 ```toml
-pegnetd = "0.1.1"
+pegnetd = "0.1.2"
 ```
 
 ## Quickstart
