@@ -1,3 +1,4 @@
+//! Constants for use with the library
 /// JSON-RPC versioning
 pub const JSONRPC : &str = "2.0";
 /// Default JSON-RPC ID

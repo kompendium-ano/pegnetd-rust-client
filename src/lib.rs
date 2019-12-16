@@ -1,3 +1,5 @@
+//! A json-rpc client for pegnetd
+
 pub extern crate tokio;
 
 pub mod requests;

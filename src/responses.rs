@@ -1,3 +1,6 @@
+//! Contains the generic api response struct along with specific
+//! structs for each indiviual endpoint
+
 use serde::Deserialize;
  
 /// JSON responses are deserialized into this struct

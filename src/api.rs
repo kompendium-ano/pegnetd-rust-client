@@ -1,3 +1,5 @@
+//! Holds the base client struct along with the api call functions
+
 use super::*;
 use serde::Serialize;
 
