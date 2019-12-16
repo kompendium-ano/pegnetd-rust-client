@@ -23,38 +23,38 @@ pub struct Error {
 /// get-transaction-status function
 #[derive(Default, Debug, Clone, PartialEq, serde_derive::Serialize, serde_derive::Deserialize)]
 pub struct TxStatus {
-  pub height: i64,
-  pub executed: i64,
+  pub height: usize,
+  pub executed: usize,
 }
 
 /// Output strcut for get-sync-status call
 #[derive(Default, Debug, Clone, PartialEq, serde_derive::Serialize, serde_derive::Deserialize)]
 pub struct SyncStatus {
-  pub syncheight: i64,
-  pub factomheight: i64,
+  pub syncheight: usize,
+  pub factomheight: usize,
 }
 
 #[derive(Default, Debug, Clone, PartialEq, serde_derive::Serialize, serde_derive::Deserialize)]
 pub struct Transaction {
   pub actions: Vec<Action>,
-  pub count: i64,
-  pub nextoffset: i64,
+  pub count: usize,
+  pub nextoffset: usize,
 }
 
 #[derive(Default, Debug, Clone, PartialEq, serde_derive::Serialize, serde_derive::Deserialize)]
 pub struct Action {
   pub hash: String,
   pub txid: String,
-  pub height: i64,
+  pub height: usize,
   pub timestamp: String,
-  pub executed: i64,
-  pub txindex: i64,
-  pub txaction: i64,
+  pub executed: usize,
+  pub txindex: usize,
+  pub txaction: usize,
   pub fromaddress: String,
   pub fromasset: String,
-  pub fromamount: i64,
+  pub fromamount: usize,
   pub toasset: String,
-  pub toamount: i64,
+  pub toamount: usize,
 }
 
 /// get-pegnet-issuance function
@@ -68,87 +68,87 @@ pub struct PegnetIssuance {
 #[derive(Default, Debug, Clone, PartialEq, serde_derive::Serialize, serde_derive::Deserialize)]
 pub struct Assets {
   #[serde(rename = "PEG")]
-  pub peg: i64,
+  pub peg: usize,
   #[serde(rename = "pADA")]
-  pub p_ada: i64,
+  pub p_ada: usize,
   #[serde(rename = "pBNB")]
-  pub p_bnb: i64,
+  pub p_bnb: usize,
   #[serde(rename = "pBRL")]
-  pub p_brl: i64,
+  pub p_brl: usize,
   #[serde(rename = "pCAD")]
-  pub p_cad: i64,
+  pub p_cad: usize,
   #[serde(rename = "pCHF")]
-  pub p_chf: i64,
+  pub p_chf: usize,
   #[serde(rename = "pCNY")]
-  pub p_cny: i64,
+  pub p_cny: usize,
   #[serde(rename = "pDASH")]
-  pub p_dash: i64,
+  pub p_dash: usize,
   #[serde(rename = "pDCR")]
-  pub p_dcr: i64,
+  pub p_dcr: usize,
   #[serde(rename = "pETH")]
-  pub p_eth: i64,
+  pub p_eth: usize,
   #[serde(rename = "pEUR")]
-  pub p_eur: i64,
+  pub p_eur: usize,
   #[serde(rename = "pFCT")]
-  pub p_fct: i64,
+  pub p_fct: usize,
   #[serde(rename = "pGBP")]
-  pub p_gbp: i64,
+  pub p_gbp: usize,
   #[serde(rename = "pHKD")]
-  pub p_hkd: i64,
+  pub p_hkd: usize,
   #[serde(rename = "pINR")]
-  pub p_inr: i64,
+  pub p_inr: usize,
   #[serde(rename = "pJPY")]
-  pub p_jpy: i64,
+  pub p_jpy: usize,
   #[serde(rename = "pKRW")]
-  pub p_krw: i64,
+  pub p_krw: usize,
   #[serde(rename = "pLTC")]
-  pub p_ltc: i64,
+  pub p_ltc: usize,
   #[serde(rename = "pMXN")]
-  pub p_mxn: i64,
+  pub p_mxn: usize,
   #[serde(rename = "pPHP")]
-  pub p_php: i64,
+  pub p_php: usize,
   #[serde(rename = "pRVN")]
-  pub p_rvn: i64,
+  pub p_rvn: usize,
   #[serde(rename = "pSGD")]
-  pub p_sgd: i64,
+  pub p_sgd: usize,
   #[serde(rename = "pUSD")]
-  pub p_usd: i64,
+  pub p_usd: usize,
   #[serde(rename = "pXAG")]
-  pub p_xag: i64,
+  pub p_xag: usize,
   #[serde(rename = "pXAU")]
-  pub p_xau: i64,
+  pub p_xau: usize,
   #[serde(rename = "pXBC")]
-  pub p_xbc: i64,
+  pub p_xbc: usize,
   #[serde(rename = "pXBT")]
-  pub p_xbt: i64,
+  pub p_xbt: usize,
   #[serde(rename = "pXLM")]
-  pub p_xlm: i64,
+  pub p_xlm: usize,
   #[serde(rename = "pXMR")]
-  pub p_xmr: i64,
+  pub p_xmr: usize,
   #[serde(rename = "pZEC")]
-  pub p_zec: i64,
+  pub p_zec: usize,
 }
 
 #[derive(Default, Debug, Clone, PartialEq, serde_derive::Serialize, serde_derive::Deserialize)]
 pub struct Transactions {
   pub actions: Vec<TxsAction>,
-  pub count: i64,
-  pub nextoffset: i64,
+  pub count: usize,
+  pub nextoffset: usize,
 }
 
 #[derive(Default, Debug, Clone, PartialEq, serde_derive::Serialize, serde_derive::Deserialize)]
 pub struct TxsAction {
   pub hash: String,
-  pub height: i64,
+  pub height: usize,
   pub timestamp: String,
-  pub executed: i64,
-  pub txindex: i64,
-  pub txaction: i64,
+  pub executed: isize,
+  pub txindex: usize,
+  pub txaction: usize,
   pub fromaddress: String,
   pub fromasset: String,
-  pub fromamount: i64,
+  pub fromamount: usize,
   pub toasset: Option<String>,
-  pub toamount: Option<i64>,
+  pub toamount: Option<usize>,
   #[serde(default)]
   pub outputs: Vec<Output>,
 }
@@ -156,5 +156,5 @@ pub struct TxsAction {
 #[derive(Default, Debug, Clone, PartialEq, serde_derive::Serialize, serde_derive::Deserialize)]
 pub struct Output {
   pub address: String,
-  pub amount: i64,
+  pub amount: usize,
 }
