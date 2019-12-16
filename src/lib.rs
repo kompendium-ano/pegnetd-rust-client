@@ -1,9 +1,10 @@
+pub extern crate tokio;
+
 pub mod requests;
 pub mod responses;
 pub mod api;
 pub mod constants;
 
-#[macro_use]
 pub use tokio::prelude::*;
 pub use tokio::runtime::Runtime;
 pub use constants::*;
