@@ -10,6 +10,8 @@ In cargo.toml:
 pegnetd = "0.1.2"
 ```
 
+## [Documentation](https://docs.rs/pegnetd)
+
 ## Quickstart
 ```rust
 #[tokio::main]
@@ -35,9 +37,11 @@ let api = Pegnetd::open_node();
 let api = Pegnetd::custom_node("http://192.168.1.42:8070/v1");
 ```
 
-## [Documentation](https://docs.rs/pegnetd)
-
-
 ## Contributing
 PR's welcome. Fork the library and submit to dev branch. 
 By contributing to this library you agree to it being Apache 2.0 licensed 
+
+#### Donations
+FCT: `FA2dJL4qbQimfkXjP7jREdm48AjPzdS8rcosfJisG2L465bs1ean`
+
+BTC: `bc1qt0hcaf3w7mgms37zj4jdtaas42vpg9uhdwvm5e4tf2maj6yk6etqjdqqpg`
