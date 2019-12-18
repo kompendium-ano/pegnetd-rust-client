@@ -16,10 +16,10 @@ pub async fn request<T, R>(api: &Pegnetd, req: R) -> ApiResponse<T>
                       .json(&req)
                       .send()
                       .await
-                      .unwrap()
+                      .expect("Network Request - Check Pegnetd is running")
                       .json()
                       .await
-                      .unwrap();
+                      .expect("Parsing JSON");
   response
 }
 
