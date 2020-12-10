@@ -1,4 +1,5 @@
 # Pegnetd Client
+![Rust](https://github.com/kompendium-ano/pegnetd-rust-client/workflows/Rust/badge.svg)
 
 A JSON-RPC Rust client for the PegNet.
 
